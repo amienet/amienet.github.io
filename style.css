@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F2F2F0;
+  }
+
+a{
+    text-decoration: none;
+}
+
+header{
+    height: 75px;
+    box-shadow: 3px 2px 23px 0px #000;
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+  
+.logo {
+    font-size: 1.8rem;
+    color: #000;
+    padding-left: 20px;
+    font-weight: 700;
+}
+  
+.hamburger {
+    padding-right: 20px;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    display: block;
+    width: 25px;
+    height: 5px;
+    margin-bottom: 3px;
+    background-color: black;
+}
+  
+.nav__link {
+  position: absolute;
+    width: 100%;
+    top: 4rem;
+    background-color: whitesmoke;
+}
+
+.nav__link a {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  color: #000;
+  font-weight: 500;
+}
+
+.nav__link a:hover {
+  color: white;
+  border-radius: 25px;
+  background-color: #000;
+}
+
+.hide {
+  display: none;
+}
+
+/* END OF HEADER */
+.Welcome-Wrapper{
+  display: flex;
+  height: 100vh;
+}
+
+.scroller {
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  overflow: hidden;
+  width: 35em;
+}
+.scroller > span {
+  position: absolute;
+  top: 0;
+    animation: slide 6s infinite;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+.Scroller-Wrapper{
+  margin-left: 150px;   
+  margin-top: 290px;
+}
+.Scroller-Wrapper .Button-1 {
+  margin-top: 30px;
+}
+.Banner img{
+  height: 520px;
+  border-radius: 35px;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+@keyframes slide {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -1.1em;
+  }
+  50% {
+    top: -2.4em;
+  }
+  75% {
+    top: -3.6em;
+  }
+  100%{
+    top: -4.6em
+  }
+}
+.About-Container{
+  height: 80vh;
+  background-color: white;
+}
+.About-Wrapper{
+  display: flex;
+  padding-top: 120px;
+}
+.About-Wrapper h2 {
+  text-align: center;
+  padding-top: 10px;
+}
+.About-Wrapper .About {
+  width: 55%;
+  margin-left: 30px;
+}
+.About-Wrapper .About p {
+  padding-top: 30px;
+}
+.About-Wrapper2{
+  width: 45%;
+  padding-left: 20px;
+}
+.About-Wrapper2 h2{
+  text-align: center;
+}
+.About-Wrapper2 .About-2{
+  display: flex;
+}
+.About-Wrapper2 .About-2 img {
+  border-radius: 20px;
+  width: 300px;
+}
+.About-Wrapper2 .About-2 p {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.Product-Container{
+  height: 200vh;
+}
+.Product-Container h2{
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  font-size: 29px;
+  font-weight: 900;
+}
+.Product-Container  .Product-Row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+.Product-Container .Product-Row .Product-Col {
+  width: 320px;
+  padding: 20px;
+  border-radius: 32px;
+  background-color: white;
+  height: 520px;
+}
+.Product-Container .Product-Row .Product-Col img{
+  width: 230px;
+  height: 200px;
+}
+/* Common Styling */
+.Button-1{
+  background-color: black;
+  color: white;
+  padding: 15px ;
+  position: absolute;
+  border-radius: 50px;
+}
+
+.Button-1:hover{
+  background-color: white;
+  color: black;
+}
+/* End OF Common Styling*/
+@media screen and (max-width: 1600px) {
+  .Banner img {
+    margin-top: 150px;
+    height: 450px;
+    margin-left: -10px;
+  }
+  .Product-Container .Product-Row .Product-Col{
+    width: 270px;
+    height: 80vh;
+  }
+}
+@media screen and (min-width: 600px) {
+  .nav__link {
+    display: block;
+    position: static;
+    width: auto;
+    margin-right: 20px;
+    background: none;
+  }
+  
+  .nav__link a {
+    display: inline-block;
+    padding: 15px 20px;
+  }
+  
+  .hamburger {
+    display: none;
+  }
+
+  
+}
+
+@media screen and (max-width: 430px) {
+  .Welcome-Wrapper{
+    display: block;
+  }
+  .Scroller-Wrapper{
+    margin-left: 25px;
+    position: absolute;
+    margin-top: 380px;
+  }
+  .Banner img {
+    height: 280px;
+    margin-left: 10px;
+    margin-top: 100px;
+  }
+  .About-Container{
+    height: 150vh;
+  }
+  .About-Wrapper{
+    flex-direction: column;
+    height: 150vh;
+    
+  }
+  .About-Wrapper .About{
+    width: 100%;
+    margin-left: 10px;
+  }
+  .About-Wrapper2{
+    width: 100%;
+    padding-left: 0px;
+  }
+  .About-Wrapper2 .About-2 {
+   flex-direction: column;
+   padding-left: 20px;
+  }
+  .About-Wrapper2 .About-2 img{
+  border-radius: 20px;  
+  }
+  .Product-Container .Product-Row {
+    flex-direction: column;
+    margin-left: 50px;
+    margin-bottom: 0px;
+  }
+
+  .Product-Container .Product-Row .Product-Col{
+    margin-bottom: 40px;
+  }
+}
